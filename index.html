@@ -73,7 +73,10 @@ function copyCode(button) {
   var codeElement = button.previousElementSibling;
   var code = codeElement.innerText;
   navigator.clipboard.writeText(code);
-  alert("Code copied to clipboard!");
+  button.innerText = "Copied";
+  setTimeout(function() {
+    button.innerText = "Copy";
+  }, 1000);
 }
 </script>
 </body>
