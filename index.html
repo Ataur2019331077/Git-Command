@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>git command</title>
+  <style>
+    .code-card {position: relative; background-color: black; color: white; border-radius: 5px; padding: 10px; margin-bottom: 20px; width:75%;}
+    .copy-btn {position: absolute; top: 5px; right: 5px; background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 3px; cursor: pointer;}
+  </style>
+</head>
+<body style="background-color: #E7E0D3; font-family: sans-serif; font-size:large; justify-content: center">
+<h2>The git commands that all you need to know.</h2>
+<p>https://github.com/username/repository.git is the same link that you copied for clone the project.</p>
+<h4>Lets start.</h4>
+<p>Now go to your <a href="https://github.com/">github</a> profile. Then create a new repository.</p>
+<p>Now you will see like below</p>
+<img src="repository.png" alt="image">
+<p>Now <b>click</b> on the green button named <b>code</b> and copy the link of the repository.</p>
+<p>Now open your terminal and go the <b>directory</b> where you want to clone this project.</p>
+<p>Now you will use your first git command. Get ready.</p>
+<div class="code-card">
+<pre>git clone https://github.com/username/repository.git(the link that you copied)</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>This command will clone the project that you have just created on github some moment ago.</p>
+<p>Now we will initialize our repository into git.</p>
+<div class="code-card">
+  <pre>git init</pre>
+  <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+  </div>
+<p>Now you can add files and project files on this directory.</p>
+<p>To <b>include</b> new files or changed files in the directory you need to run the below command:</p>
+<div class="code-card">
+<pre>git add .</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>If you want to <b>include</b> specific files:</p>
+<div class="code-card">
+<pre>git add file_name1 file name2</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>To <b>save</b> the files locally run the command.</p>
+<div class="code-card">
+<pre>git commit -m "initial commit"</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>here "initial commit" is the message to show what you have changed. Here you can write whatever you want.</p>
+<p>Now we will <b>connect remotely</b> this directory to github directory:</p>
+<div class="code-card">
+<pre>git remote add origin https://github.com/username/repository.git</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>It's time to <b>upload</b> the files into github repository.
+You can do this by run the command below:</p>
+<div class="code-card">
+<pre>git push -u origin master</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p><b>It will upload on your master branch.</b></p>
+<p>However if you want to <b>change your branch</b> you can run the command and then you can push:</p>
+<div class="code-card">
+<pre>git checkout -b main</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>If there is <b>conflict</b> in your local files with github repository files then <b>push</b> command will not work properly.
+However, if you want to upload your files forcibly, then run the code below:</p>
+<div class="code-card">
+<pre>git push -f origin main</pre>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+<p>In conclusion, mastering these essential Git commands equips you with the necessary tools to efficiently manage your projects, collaborate seamlessly, and navigate the world of version control with confidence. Happy coding!</p>
+<script>
+function copyCode(button) {
+  var codeElement = button.previousElementSibling;
+  var code = codeElement.innerText;
+  navigator.clipboard.writeText(code);
+  alert("Code copied to clipboard!");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+title:
+git command
+h2:
+The git commands that are you need to know.
+p:
+In the realm of modern software development, effective version control is paramount. It's the backbone of collaborative coding, enabling teams to seamlessly work together, track changes, and maintain the integrity of their projects. Among the plethora of version control systems available, Git stands out as one of the most widely adopted and powerful tools.
+h4:
+Lets start.
+h5:
+First go to your <a href="https://github.com/">github</a>. profile. Then create a new repository.
+h5:
+Now you will see like below
+image:
+repository.png
+h5:
+Now click on the green button named <code> and copy the link of the repository.
+h5:
+Now open your terminal and go the directory where you want to clone this project.
+h5:
+Now you will use your first git command. Get ready.
+code:
+git clone
+p:
+This command will clone the project that you have just created on github some moment ago.
+h5:
+Now you can add files and project files on this directory.
+h5:
+To include new files or changed files in the directory you need to run the below command:
+code:
+git add .
+h5:
+If you want to save specific files
+code:
+git add file_name1 file name2
+h5:
+To save the files locally run the command.
+code:
+git commit -m "initial commit"
+p:
+here "initial commit" is the message to show what you have changed. Here you can write whatever you want.
+h5:
+Now we will connect remotely this directory to github directory
+code:
+git add remote add origin https://github.com/username/repository.git
+p:
+https://github.com/username/repository.git is the same link that you copied for clone the project.
+h5:
+It's time to upload the files into github repository.
+You can do this by run the command below
+code:
+git push -u origin master
+h5:
+It will upload on your master branch.
+However if you want to change your branch you can run the command and then you can push.
+code:
+git checkout -b main
+
+h5:
+If there is conflict in your local files with github repository files then <b>push</b> command will not work properly.
+However, if you want to upload your files forcibly, then run the code below.
+code:
+git push -f origin main
+h5:
+In conclusion, mastering these essential Git commands equips you with the necessary tools to efficiently manage your projects, collaborate seamlessly, and navigate the world of version control with confidence. Happy coding!
+
+
+
+
